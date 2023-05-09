@@ -14,15 +14,13 @@ app.use(express.urlencoded({ extended: true })); // html da from request post qi
 
 // < 3 > Views code
 app.set("views", "views");
-app.set("views engine", "ejs");
+app.set("view engine", "ejs");
 
 // < 4 > Routing code
 app.get("/", function (req, res) {
-    res.end("<h1> Hello by Steve </h1>"); 
+    res.render("harid");
 });
-app.get("/gift", function (req, res) {
-    res.end("<h1> Sizga shu sovga </h1>"); 
-});
+
 
 const server = http.createServer(app);
 let PORT = 3000;
